@@ -1,96 +1,86 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
-
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import ProjectCard from './ProjectCards'
+import Particle from '../Particle'
+import alpaca from '../../Assets/Projects/1_mb-wx9qdsOeAw89gFMIcXg.jpg'
+import writer from '../../Assets/Projects/Content-writer-1068x561.jpg'
+import annotation from '../../Assets/Projects/featured_ai_data_solutions.jpeg'
+import faceRecog from '../../Assets/Projects/Blog-Facial-recognition-tech-in-the-workplace.png'
+import dataAnalyst from '../../Assets/Projects/0_RC41_1dzkTm_zMeF.jpg'
+import ml from '../../Assets/Projects/1_cG6U1qstYDijh9bPL42e-Q.jpg'
 function Projects() {
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-      <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="test"
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
+    return (
+        <Container fluid className="project-section">
+            <Particle />
+            <Container>
+                <h1 className="project-heading">
+                    My Recent <strong className="purple">Works </strong>
+                </h1>
+                <p style={{ color: 'white' }}>
+                    Here are a few projects I've worked on recently.
+                </p>
+                <Row
+                    style={{ justifyContent: 'center', paddingBottom: '10px' }}
+                >
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={annotation}
+                            isBlog={false}
+                            title="Data Annotation"
+                            description="I had been an data annotator for 3 and half year, by using tools such as V7 tools, Baobabu tools, spreadsheet. I have experience in label the data using square and polygon, also verify the data label to correct the human error, and do some translations. I am really enjoy working on it."
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={faceRecog}
+                            isBlog={false}
+                            title="Image Recognition"
+                            description="I had learn how to use openCV, PIP(pil image processing), faceNet, and some knowledge how to train data and test my own data to regconite the image. I am planning to make a further modified and implement it. "
+                            ghLink="https://github.com/Chy-kimtong/openCV"
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"
-            />
-          </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={writer}
+                            isBlog={false}
+                            title="Content Writer"
+                            description="I am doing internship as content writer and write some script for video contents, some for posting on social platform such as facebook, youtube and tiktok. Most of content are about the project review and technology. I am also a co-lead of the team too."
+                        />
+                    </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here
-            />
-          </Col>
-        </Row>
-      </Container>
-    </Container>
-  );
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={alpaca}
+                            isBlog={false}
+                            title="Trading bot"
+                            description="The trading, I and my team build mostly on google colab, and though we are focus on testing our strategy on how to leave the bot buy and sell automatically, we tend to do on Alpaca, Binance, and coinbase by using paper money, we mostly use the buy low sell high strategy which we apply our algorithm to run. The code of our example in demo"
+                            demoLink="https://colab.research.google.com/drive/1yxjBK9UP9VaI-UVFKByBCkIUxDnKVzC-?usp=sharing"
+                        />
+                    </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={dataAnalyst}
+                            isBlog={false}
+                            title="Data Analyst"
+                            description="I have been doing research on Data Analyst and also complete the course of google analysis on coursera. I gain alot of knowledge about spreadsheet, SQL, and R, then there are more things such the good questions to ask, the presentation skill. "
+                            demoLink="https://www.coursera.org/professional-certificates/data-analytics-certificate"
+                        />
+                    </Col>
+                    <Col md={4} className="project-card">
+                        <ProjectCard
+                            imgPath={ml}
+                            isBlog={false}
+                            title="Machine Learning"
+                            description="I have complete many course and practicing on building the model to test the data on kaggle and machinehack, I also seek help from geekforgeek, javatpoint and some community that suppose to face the same problem I am looking for."
+                            demoLink="https://www.kaggle.com/chykimtong"
+                        />
+                    </Col>
+                </Row>
+            </Container>
+        </Container>
+    )
 }
 
-export default Projects;
+export default Projects
